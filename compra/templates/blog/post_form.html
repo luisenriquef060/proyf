@@ -1,0 +1,45 @@
+{%extends "blog/base.html"%}
+
+{% block content%}
+<head>
+           <title>Compra Venta</title>
+
+           <meta charset="utf-8" />
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <meta name="description" content="Saturn is free PSD &amp; HTML template by @flamekaizar">
+           <meta name="author" content="Afnizar Nur Ghifari">
+           <meta name="viewport" content="width=device-width, initial-scale=1" />
+           {% load static %}
+           <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+           <link rel="stylesheet" href="{% static 'css/custom.min.css' %}" />
+           <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" />
+           <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+           <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+           <link rel="stylesheet" type="text/css" href="{% static 'css/kube.min.css' %}" />
+       </head>
+  <body style="background-color:#3d3d3d">
+
+<div class='page-header'>
+    <h1 id='cont'>Nuevo</h1>
+</div>
+<div class='col-sm-22 col-sm-offset-0'>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="thumbnail">
+          <!--<img src="..." alt="...">-->
+          <div class="caption">
+              <div id="cont">
+               <form  method='POST' action='' enctype='multipart/form-data'>{% csrf_token %}
+            {{form.as_p}}
+           <p> <input  type='submit' class='btn btn-Default' value ='Guardar'/>
+          <input  class='btn btn-Default' href="http://127.0.0.1:8000/" value ='Inicio'></p>
+
+        </form>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+{% endblock content%}
